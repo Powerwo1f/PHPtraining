@@ -1,0 +1,889 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: comic sans ms;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+    font-family: comic sans ms;
+}
+.page{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #c03e42;;
+}
+.error{
+    position: relative;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    color: red;
+}
+/* ШАПКА */
+.header {
+    z-index: 30;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: solid 1px gray;
+    background-color: #f6f6f6;
+}
+.header_start {
+    z-index: 30;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+#link1 {
+    color: black;
+    background: white;
+    padding: 5px 10px 5px;
+    border-radius: 2px;
+    width: auto;
+}
+#link2 {
+    color: white;
+    background: #e06c6c;
+    padding: 5px 10px 5px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+#ex1 {
+    color: black;
+    background: white;
+    padding: 5px 10px 5px;
+    border-radius: 2px;
+    width: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s;
+}
+#ex2 {
+    color: white;
+    background: #e06c6c;
+    padding: 5px 10px 5px;
+    border-radius: 2px;
+    margin-right: 5px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s;
+}
+#link3 {
+    color: #e06c6c;
+    font-size: 33px;
+    margin: 0px 7px;
+    position: relative;
+}
+#link4 {
+    color: #e06c6c;
+    font-size: 25px;
+    margin: 0px 7px;
+    position: relative;
+    top: 6px;
+}
+#link5 {
+    color: #e06c6c;
+    font-size: 25px;
+    margin: 0px 7px;
+    position: relative;
+    top: 6px;
+}
+.header_links  img{
+    width: 100%;
+    position: relative;
+    top: -7px;
+    border-radius: 3px;
+}
+.userlogo {
+    overflow: hidden;
+    height: 40px;
+    margin-top: -2px;
+    width: 40px;
+}
+.login_button {
+    background-color: #e06c6c;
+    color: white;
+    margin-bottom: 15px;
+}
+.register_button {
+    color: black;
+    background-color: white;
+}
+#registration button{
+    background-color: #e06c6c;
+    color: white;
+    margin-bottom: 15px;
+}
+#start {
+    display: block;
+    padding: 13px;
+    margin-top: 30px;
+    height: 100px;
+}
+#registration {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 2s;
+}
+#login{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 2s;
+}
+#registration form{
+    width: 300px;
+    position: relative;
+    display: inline-block;
+}
+#registration input{
+    width: 95%;
+    padding: 2%;
+    height: 30px;
+}
+#login form{
+    width: 300px;
+    position: relative;
+    display: inline-block;
+}
+#login input {
+    width: 95%;
+    padding: 2%;
+    height: 30px;
+    border: none;
+    border-bottom: solid 1px grey;
+}
+
+.header a{
+    top: 0;
+    text-align: left;
+    margin: 5px;
+    color: white;
+}
+#opa{
+    position: absolute;
+}
+.header_links {
+    float: right;
+}
+/* ТЕЛО */
+.container{
+    width: 90%;
+    left: 5%;
+    position: relative;
+}
+.container a:hover {
+    cursor: pointer;
+}
+.search input{
+    width: 340px;
+    height: 25px;
+    padding-left: 10px;
+    opacity: 0.6;
+    transition: 1s;
+}
+.search input:focus {
+    opacity: 1;
+}
+.search i{
+    font-size: 30px;
+    margin: 0px;
+    position: relative;
+    top: 7px;
+    color: #e87676;
+}
+form {
+    margin-top: 10px;
+}
+.content {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding-bottom: 350px;
+}
+.verticalpagination {
+    position: fixed;
+    top: 45%;
+    left: 20px;
+    width: 50px;
+    height: 115px;
+    z-index: 30;
+    text-align: center;
+}
+.verticalpagination div {
+    border: solid white 3px;
+    border-radius: 100px;
+    width: 12px;
+    margin: 12px 8px 8px 8px;
+    height: 12px;
+    opacity: 50%;
+}
+.verticalpagination div:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.verticalpagination .active {
+    background: white;
+    opacity: 1;
+}
+.postpage {
+    height: 40px;
+    width: 270px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+}
+.postpage a{
+    color: white;
+    float: left;
+    font-size: 15px;
+}
+.postpage img {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    margin-top: -10px;
+}
+.banner{
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 900px;
+    background: black;
+    text-align: center;
+}
+.banner_body{
+    position: relative;
+    left: 0;
+    display: inline-block;
+    top: 25%;
+    width: 30%;
+    z-index: 20;
+    height: 400px;
+}
+.banner .banner_body .bot{
+    clear: both;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    text-align: center;
+}
+.banner .background {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    opacity: 0.7;
+    width: 100%;
+}
+.banner_body a {
+    text-align: left;
+    color: white;
+}
+.bot h1 {
+    color: white;
+    font-size: 75px;
+    margin: 0;
+}
+.bot h2{
+    color: white;
+    margin-top: 0;
+    font-size: 14px;
+}
+.bot button{
+    display: inline-block;
+    outline: none;
+    border: none;
+    width: 300px;
+    top: 10px;
+    height: 40px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+.blocks {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+}
+.block {
+    display: inline-block;
+    position: relative;
+    left: 0px;
+    top: 25px;
+    width: 49%;
+    margin: 0;
+    height: 200px;
+    text-shadow: 8px 0px 5px #f1ebeb;
+    color: #2d2d2d;
+    padding-bottom: 30px;
+}
+.block .popa {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+.popa h3{
+    width: 80%;
+}
+.popa p{
+    width: 80%;
+}
+.home-lenta{
+    float: left;
+    width: 65%;
+}
+.recblog {
+    width: 28%;
+    height: 200px;
+    position: relative;
+    float: left;
+    left: 0;
+    background: white;
+    border-radius: 3px;
+    margin-left: 50px;
+}
+.homepage {
+    position: relative;
+    width: 65%;
+    left: 20%;
+    top: 70px;
+}
+.lentabocks {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+.lentablock{
+    position: relative;
+    margin-top: 30px;
+}
+#userpage1 {
+    height: 100px;
+    margin-top: 0;
+}
+.fotouser img {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    border-radius: 3px;
+}
+.fotouser {
+    overflow: hidden;
+    margin-top: 0;
+    width: 75px;
+    float: left;
+}
+#userpage1 .forma {
+    width: 87%;
+    height: 100px;
+    background: white;
+    border-radius: 3px;
+    float: right;
+}
+#userpage1 textarea {
+    resize: none;
+    width: 95%;
+    height: 30px;
+    outline: 0;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    margin-left: 10px;
+}
+.selection {
+    width: 100%;
+    height: 56px;
+    background: #f6f6f6;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: solid 1px #d2cfcf;
+}
+.selection i {
+    color: #e06c6c;
+    font-size: 20px;
+    margin: 18px 3px;
+    position: relative;
+    left: 10px;
+}
+.selection button {
+    outline: none;
+    left: 0;
+    border: none;
+    float: right;
+    margin: 14px 18px;
+    bottom: 10px;
+    width: 17%;
+    height: 30px;
+    font-weight: bold;
+    background: #e87676;
+    border-radius: 3px;
+}
+#userpage1 textarea::-webkit-input-placeholder {
+    color: silver;
+}
+/* post */
+.post {
+    width: 87%;
+    float: right;
+    min-height: 650px;
+    background: white;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.post-header{
+    height: 50px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: #f6f6f6;
+    border-bottom: solid 1px #d2cfcf;
+}
+.post-header h4{
+    position: relative;
+    float: right;
+    margin: 14px 10px;
+    color: #e87676;
+}
+.post-header p {
+    position: relative;
+    display: inline-block;
+    margin: 14px 14px;
+}
+.edit {
+    position: relative;
+    width: 35px;
+    height: 50px;
+    float: right;
+    z-index: 20;
+}
+.edit i {
+    position: relative;
+    text-align: left;
+    display: block;
+    top: 16px;
+    font-size: 20px;
+}
+.editpage {
+    position: absolute;
+    width: 170px;
+    height: 140px;
+    background: white;
+    float: left;
+    right: 0;
+    top: 45px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 1px rgba(209,209,209,1);
+}
+.editpage button {
+    outline: none;
+    left: 0;
+    border: none;
+    width: 170px;
+    height: 28px;
+    background: white;
+    text-align: left;
+}
+.post-body {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 490px;
+    z-index: 10;
+}
+.post-body p {
+    width: 80%;
+    font-size: 12px;
+    margin-left: 2%;
+}
+.fotopost {
+    margin-top: 0;
+    width: 80%;
+    float: left;
+    z-index: 10;
+}
+.fotopost img {
+    max-width: 280px;
+    position: relative;
+    top: 0px;
+    margin-left: 2.5%;
+}
+.like_wrap {
+    position: relative;
+    display: inline-block;
+    width: 96%;
+    margin-left: 2%;
+    height: 43px;
+    border-top: solid 1px #d2cfcf;
+
+}
+.like {
+    width: 100%;
+    height: 43px;
+}
+.like i {
+    color: #e87676;
+    font-size: 20px;
+    float: left;
+    margin-right: 30px;
+    top: 15px;
+    position: relative;
+}
+.eye {
+    height: 50px;
+    float: right;
+    margin-left: 0;
+}
+.eye i{
+    color: #b6b6b6;
+    right: 5px;
+    font-size: 15px;
+    margin: 0;
+
+}
+.eye p{
+    color: #b6b6b6;
+    font-size: 10px;
+    float: right;
+    margin: 15px 0px 0px 0px;
+}
+/* Post Comments */
+.comments {
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    min-height: 110px;
+    max-height: 300px;
+    border-top: solid 1px #d2cfcf;
+    padding: 10px 0px;
+}
+.comment{
+    position: relative;
+    width: 100%;
+    left: 0;
+}
+.comment-user-photo {
+    overflow: hidden;
+    width: 40px;
+    float: left;
+    margin: 5px 0px 0px 10px;
+}
+.comment-user-photo img {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    border-radius: 3px;
+}
+.comment-user-text {
+    width: 89%;
+    border-radius: 3px;
+    float: right;
+    margin-right: 1%;
+    padding-bottom: 10px;
+}
+.comment-user-text p{
+    font-size: 10px;
+    position: relative;
+    margin-left: 8px;
+}
+.comment-user-text .comment-date{
+    font-size: 10px;
+    display: inline-block;
+    color: silver;
+}
+.comment-user-text .comment-answer{
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 10px;
+    color: #c03e42;
+}
+/* write-comment  */
+.write-comment{
+    position: relative;
+    width: 100%;
+}
+
+.write-comment textarea {
+    resize: none;
+    width: 80%;
+    height: 30px;
+    outline: 0;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 7px;
+    margin: 0px 0px 0px 8px;
+}
+.write-comment i {
+    color: #e87676;
+    font-size: 30px;
+    float: right;
+    margin-right: 9px;
+    top: 5px;
+    position: relative;
+}
+.like-comment i {
+    color: rgba(111, 99, 99, 0.35);
+    font-size: 15px;
+    float: right;
+    margin-right: 5px;
+    top: 5px;
+    position: relative;
+}
+
+.like-comment i:hover {
+    background: none;
+}
+
+.like-comment i:active {
+    color: #e87676;
+}
+
+.like-comment p{
+    float: right;
+    color: #b6b6b6;
+    font-size: 10px;
+    margin: 5px 0px 0px 0px;
+
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+    background: #d2cfcf;
+}
+.lola {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    text-align: center;
+    color: #2d2d2d;
+    padding-top: 20px;
+}
+.lola img{
+    position: relative;
+    width: 30px;
+    margin: 10px;
+}
+.lola button {
+    position: relative;
+    margin: 5px;
+    outline: none;
+    left: 0;
+    border: 1px solid rgb(128, 177, 126);
+    border-radius: 10px;
+    color: #000000;
+    width: 15%;
+    height: 50px;
+    background: rgb(128, 177, 126);
+    font-weight: bold;
+    text-align: center;
+}
+
+.lola button:hover {
+    background: none;
+}
+.lola button:active {
+    background: #d2cfcf;
+}
+
+footer button:active {
+    background: white !important;
+}
+.middleinputs {
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+.middleinputs input {
+    position: absolute;
+    width: 45.5%;
+    height: 60px;
+    border: none;
+    margin: 5px 0px 5px 0px;
+    background: #80b17e;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+.middleinputs input:nth-child(1){
+    left: 0;
+}
+.middleinputs input:nth-child(2){
+    right: 0;
+    margin-right: 0;
+}
+input{
+    outline: 0;
+}
+input::-webkit-input-placeholder {
+    color: gray;
+}
+
+select{
+    outline: 0;
+}
+#us_foto {
+    top: -250px;
+}
+.blocks .about_us {
+    position: relative;
+    left: 0;
+    top: 35px;
+    height: 400px;
+    margin: 1px;
+    width: 100%;
+    text-align: center;
+}
+#us1{
+    z-index: 10;
+    border-bottom: 1px solid #d2cfcf;
+}
+#us2{
+    z-index: 20;
+}
+.about_us #us1 h2{
+    position: relative;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+.about_us p{
+    position: relative;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+.about_us .knopka{
+    position: relative;
+    height: 60px;
+    display: inline-block;
+    width: 150px;
+    top: -30px;
+    background: linear-gradient(to right, #ddecf3, #8fccda);
+    box-shadow: 0px 0px 8px 2px #8fccda;
+}
+.mynane h2{
+    text-align: center;
+}
+.fotoalb{
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: ridge;
+}
+.fotoalb img{
+    width: 100%;
+}
+#write_foto{
+    top: -150px;
+}
+.blocks .blockreg {
+    position: relative;
+    top: 15px;
+    float: left;
+    margin-right: 5%;
+    left: 0;
+    height: 470px;
+    width: 45%;
+    text-align: center;
+}
+/* В случае max-width указанный внутри @Media код будет работать от 0px до 950px.
+ В случае указания min-width 950px код внутри @Media будет работать от 950px до ?ширины
+ */
+@media (max-width: 950px){
+    .banner{
+        height: 300px;
+    }
+    .blocks{
+        margin-bottom: 50px;
+    }
+}
+/* Таким образом задаётся диапазон, в котором код внутри @Media будет работать */
+@media (min-width: 651px) and (max-width: 850px){
+    .banner{
+        height: 280px;
+    }
+    .blocks{
+        margin-bottom: 130px;
+    }
+    .banner img{
+        width: 120%;
+    }
+}
+@media (max-width: 650px) {
+    .blocks{
+        margin-bottom: 130px;
+    }
+    .banner img{
+        width: 155%;
+    }
+}
+@media (max-width: 560px) {
+    .banner{
+        height: 280px;
+    }
+    .blocks{
+        margin-bottom: 70px;
+    }
+    .banner img{
+        width: 175%;
+    }
+    .lola button{
+        width: 30%;
+    }
+    p{
+        font-size: 13px;
+    }
+    h3{
+        font-size: 17px;
+    }
+    h2{
+        font-size: 19px;
+    }
+    h1{
+        font-size: 23px;
+    }
+}
+@media (max-width: 460px) {
+    .blocks{
+        margin-bottom: 100px;
+        left: 5%;
+        width: 90%;
+    }
+    .popa p {
+        width: 100%;
+    }
+    .banner_body{
+        top: 70px;
+    }
+    .banner img{
+        width: 250%;
+    }
+}

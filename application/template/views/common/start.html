@@ -1,0 +1,238 @@
+<html lang="en" style="overflow: hidden">
+<div class="verticalpagination">
+    <div id="0" class="active"></div>
+    <div id="1"></div>
+    <div id="2"></div>
+    <div id="3"></div>
+    <div id="4"></div>
+</div>
+
+<div class="banner">
+    <div class="banner_body">
+        <a class="bot">
+            <h1>STAR</h1>
+            <h2>Делитесь тем, что любите.</br>
+            Находите то, что вам интересно.</h2>
+
+            <div id="start" class="start">
+                <button class="login_button">Войти</button>
+                <button class="register_button">Зарегистрироваться</button>
+            </div>
+
+            <div id="registration" class="start">
+                <form method="post" action="index.php?route=user/user/register">
+                    <input type="email" placeholder="Эл.почта" name="email">
+                    <input type="text" placeholder="Имя пользователя" name="login">
+                    <input type="password" placeholder="Пароль" name="password">
+                    <button class="register_button" name="register_button">Зарегистрироваться</button>
+                </form>
+            </div>
+
+            <div id="login" class="start">
+                <form method="post" action="index.php?route=user/user/login">
+                    <input type="text" placeholder="Имя пользователя" name="login">
+                    <input type="password" placeholder="Пароль" name="password">
+                    <button class="login_button" name="login_button">Войти</button>
+                </form>
+            </div>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <a href="https://www.google.com/" class="botlink">Сейчас популярно</a>
+    </div>
+    <img class="background" src="https://ethnomir.ru/upload/medialibrary/e89/panter.jpg"/>
+    <div class="postpage">
+        <a href="https://taylorswift.tumblr.com">Опубликовал(а) <strong>taylorswift</strong></a>
+            <img src="https://lh3.googleusercontent.com/n7fFMNQq8yJ3dMPX64BW6Xt_nJepzHZcjm-k2XaXyM-XxF8N5ddQ1E9dAJ9hQTdi8YGdtn5NqyaregAbGp-eQJg"/>
+    </div>
+</div>
+<div class="blocks" id="secondPage">
+    <div class="block">
+        <div class="popa">
+            <h1>Rest in the mountains !!!</h1>
+            <h3>Hiking in the mountains - this is exactly what is worth solving.</h3>
+        </div>
+    </div>
+    <div class="block">
+        <div class="popa">
+            <p>This type of relaxation requires a very good physical shape, but it is also a lot of fun.
+                Thanks to this, you can enjoy not only the fresh mountain air, but also the beautiful and diverse mountain nature.
+                <br/><br/>
+                If you are a fan of this form of relaxation, it is best to visit the mountains during the warmer months.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="blocks">
+    <div class="block">
+        <div class="popa">
+            <h1>Rest in the mountains !!!</h1>
+            <h3>Hiking in the mountains - this is exactly what is worth solving.</h3>
+        </div>
+    </div>
+    <div class="block">
+        <div class="popa">
+            <p>This type of relaxation requires a very good physical shape, but it is also a lot of fun.
+                Thanks to this, you can enjoy not only the fresh mountain air, but also the beautiful and diverse mountain nature.
+                <br/><br/>
+                If you are a fan of this form of relaxation, it is best to visit the mountains during the warmer months.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="blocks">
+    <div class="block">
+        <div class="popa">
+            <h1>Rest in the mountains !!!</h1>
+            <h3>Hiking in the mountains - this is exactly what is worth solving.</h3>
+        </div>
+    </div>
+    <div class="block">
+        <div class="popa">
+            <p>This type of relaxation requires a very good physical shape, but it is also a lot of fun.
+                Thanks to this, you can enjoy not only the fresh mountain air, but also the beautiful and diverse mountain nature.
+                <br/><br/>
+                If you are a fan of this form of relaxation, it is best to visit the mountains during the warmer months.
+            </p>
+        </div>
+    </div>
+</div>
+</html>
+<script type="text/javascript">
+
+    let dublicateLogin = document.getElementById('ex2');
+    let dublicateReg = document.getElementById('ex1');
+
+    let registrationForm = document.getElementById('registration');
+    let loginForm = document.getElementById('login');
+
+    const hideElem = `
+            position:absolute;
+            opacity:0;
+            transition:none;
+        `;
+    const showElem = `
+            position:relative;
+            opacity:1;
+            transition : opacity 2s;
+        `;
+
+    function startFormDelete() {
+        document.body.getElementsByClassName('bot')[0].removeChild(element)
+    }
+
+    function pageScript (buttonName) {
+        startFormDelete();
+        document.getElementById('link1').style = hideElem;
+        document.getElementById('link2').style = hideElem;
+        document.getElementById(buttonName).style = showElem;
+    }
+
+    function showPageContent (formName) {
+        let form = document.getElementById(formName);
+        form.style = showElem;
+    }
+
+    function fadeInPageLinks (event) {
+        if (event.target.className === 'login_button') {
+            pageScript('ex1');
+            showPageContent('login')
+
+        } else if (event.target.className === 'register_button') {
+            pageScript('ex2');
+            showPageContent('registration')
+        }
+    }
+
+    function loginLinkFunc(event) {
+        let secondLink = document.getElementById('link1');
+
+        if(document.getElementById('start')) {
+            startFormDelete()
+        }
+        registrationForm.style = hideElem;
+        event.target.style = hideElem;
+        loginForm.style = showElem;
+        secondLink.style = hideElem;
+        dublicateReg.style = showElem;
+    }
+
+    function registerLinkFunc(event) {
+        let anotherLink = document.getElementById('link2');
+        if(document.getElementById('start')) {
+            startFormDelete()
+        }
+        event.target.style = hideElem;
+        loginForm.style = hideElem;
+        registrationForm.style = showElem;
+        anotherLink.style = hideElem;
+        dublicateLogin.style = showElem;
+    }
+    function downTo(i) {
+        function fun() {
+            window.scrollBy(0,20)
+            requestAnimationFrame(test)
+        }
+        function test() {
+            if(i > 0) {
+                i -=20;
+                fun();
+            }
+        }
+        test();
+    }
+    function upTo(i) {
+        function func() {
+            window.scrollBy(0,-20)
+            requestAnimationFrame(test)
+        }
+        function test() {
+            if(window.scrollY > i) {
+                func();
+            }
+        }
+        test();
+    }
+
+    function verticalpagenation (event) {
+        function changeActiveDiv() {
+            let currentActive = document.getElementsByClassName('active')[0];
+            currentActive.classList.remove('active');
+            event.target.classList.add('active');
+        }
+        event.target.classList === 'active' ? console.log('active') : changeActiveDiv();
+        if(event.target.id.toString() === '0') {
+            upTo(0)
+        } else if (event.target.id.toString() === '1') {
+            if(window.scrollY > 900) {
+                upTo(900)
+            } else if(window.scrollY < 900) {
+                downTo(900)
+            }
+        }
+    }
+    function checkActiveClass () {
+        let position = window.scrollY;
+        if (position >= 900) {
+            document.body.getElementsByClassName('active')[0].classList.remove('active')
+            document.getElementById(1).classList.add('active')
+        }
+        if (position < 900) {
+            document.body.getElementsByClassName('active')[0].classList.remove('active')
+            document.getElementById(0).classList.add('active')
+        }
+    }
+    let verticalbar = document.body.getElementsByClassName('verticalpagination')[0];
+    let act = verticalbar.getElementsByTagName('div');
+    for (let i = 0; i < act.length ; i++) {
+        act[i].onclick = verticalpagenation;
+    }
+
+    let element = document.getElementById('start');
+    let loginLink = document.getElementsByClassName('header_links')[1];
+    let registerLink = document.getElementsByClassName('header_links')[0];
+    element.onclick = fadeInPageLinks;
+    dublicateReg.onclick = registerLinkFunc;
+    registerLink.onclick = registerLinkFunc;
+    dublicateLogin.onclick = loginLinkFunc;
+    loginLink.onclick = loginLinkFunc;
+    checkActiveClass();
+</script>

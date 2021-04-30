@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My new poject</title>
+    <!-- Viewport нужен для реализации мобильной версии вёрстки -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="<?php echo DIR_TEMPLATE; ?>css/style.css?ver=1.24" />
+    <script src="<?php echo DIR_TEMPLATE; ?>js/jquery/jquery-2.1.1.min.js"></script>
+    <script src="<?php echo DIR_TEMPLATE; ?>js/main.js?ver=1"></script>
+    <script src="https://use.fontawesome.com/08669a8fa8.js"></script>
+</head>
+<body>
+<div class="page">
+    <div id="header" class="<?php echo (isset($user) ? 'header' : 'header_start'); ?>">
+        <div class="container">
+            <?php if(!isset($user)) { ?>
+                <a id="link1" class="header_links">Зарегистрироваться</a>
+                <a id="link2" class="header_links">Войти</a>
+                <a id="ex1" class="header_links">Зарегистрироваться</a>
+                <a id="ex2" class="header_links">Войти</a>
+            <?php } else { ?>
+                <div class="header_links userlogo">
+                    <a href="<?php echo $live_link; ?>" id="link6" class="header_links">
+                        <img src="https://i.pinimg.com/736x/30/af/b9/30afb9a89fb5a7cb66f1d6f059abe266.jpg">
+                    </a>
+                </div>
+                <a href="<?php echo $live_link; ?>" id="link5" class="header_links"> <i class="fa fa-envelope-open" aria-hidden="true"></i></a>
+                <a href="<?php echo $live_link; ?>" id="link4" class="header_links"> <i class="fa fa-superpowers" aria-hidden="true"></i></a>
+                <a href="<?php echo $live_link; ?>" id="link3" class="header_links"> <i class="fa fa-home" aria-hidden="true"></i></a>
+            <?php } ?>
+                <form class="search">
+                    <a href="/"> <i class="fa fa-star" aria-hidden="true"></i></a>
+                    <input type="text" placeholder="Поиск в Star...">
+                </form>
+        </div>
+    </div>
+    <?php
+        if(isset($_SESSION['login'])) {
+            ?>
+        <script type="text/javascript">
+            let msg = <?php echo "'" .$_SESSION['login'] . "'" ?>;
+            let child = document.body.getElementsByClassName('header_links')[0]
+            child.innerText = msg
+            child.href = '';
+            let deletedElem = document.body.getElementsByClassName('header_links')[1]
+            document.body.getElementsByClassName('container')[0].removeChild(deletedElem)
+        </script>
+    <?php
+        }
+
+    ?>
+
+    <div class="content">
